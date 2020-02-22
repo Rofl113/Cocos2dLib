@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.6)
 
 set(LINUX 1)
-SET(BUILD_PLATFORM linux)
+set(BUILD_PLATFORM linux)
 set(PLATFORM_FOLDER linux)
 set(PLATFORM_DEFINES "-DLINUX")
 add_definitions(-DUSE_CUSTOM_ENCRYPTION -pthread)
@@ -9,6 +9,8 @@ add_definitions(-DUSE_CUSTOM_ENCRYPTION -pthread)
 # build engine library and all tests
 
 project(Cocos2d-x)
+
+set(BUILD_EDITOR_COCOSBUILDER ON CACHE BOOL "Build CocosBuilder support" )
 
 set(BUILD_CPP_EMPTY_TEST OFF CACHE BOOL "Build empty test samples" )
 set(BUILD_CPP_TESTS OFF CACHE BOOL "Build TestCpp samples" )
